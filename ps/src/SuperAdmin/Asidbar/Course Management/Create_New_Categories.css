@@ -1,0 +1,133 @@
+.cm-wrapper {
+  background: #e7e7e7;
+  /* min-height: 100vh;  */
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  /* margin-left: 260px; */
+}
+
+/* Top Bar */
+.cm-topbar {
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cm-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cm-back-btn {
+  width: 36px;
+  height: 36px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cm-left h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.cm-right {
+  display: flex;
+  gap: 8px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.cm-right .arrow {
+  font-size: 16px;
+}
+
+/* Main Card */
+.cm-main-card {
+  background: #f9fafb;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 30px;
+  min-height: 500px;
+}
+
+/* Upload */
+.cm-upload {
+  width: 120px;
+  height: 120px;
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.cm-upload span {
+  font-size: 26px;
+}
+
+/* Form */
+.cm-form {
+  max-width: 700px;
+}
+
+.cm-form label {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.cm-form input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #09A2DB;
+  font-size: 14px;
+}
+
+.cm-form textarea {
+  width: 1096px;
+  height: 120px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #09A2DB;
+  font-size: 14px;
+  resize:both;
+}
+
+/* Buttons */
+.cm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.light {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.btn.primary {
+  background: #0ea5e9;
+  color: white;
+}

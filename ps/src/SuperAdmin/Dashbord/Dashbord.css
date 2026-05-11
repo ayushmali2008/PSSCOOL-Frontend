@@ -1,0 +1,592 @@
+/* ════════════════════════════════════════════
+   Dashboard page
+   ════════════════════════════════════════════ */
+.dashboard-page {
+  padding: 24px;
+  background: #f5f6f8;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Page heading ── */
+.dash-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.dash-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.dash-sub {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.dash-breadcrumb {
+  font-size: 12px;
+  color: #9ca3af;
+  align-self: center;
+}
+
+/* ════════════════════════════════════════════
+   Score cards strip
+   ════════════════════════════════════════════ */
+.score-strip {
+  display: flex;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 14px;
+  background-color: #09a2db;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  box-shadow: 0 4px 16px rgba(9, 162, 219, 0.3);
+  flex-wrap: wrap;
+}
+
+.score-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  padding: 16px 18px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.score-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+}
+
+.score-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.score-icon {
+  font-size: 20px;
+}
+
+.score-trend {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 20px;
+}
+
+.score-trend.up {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.score-trend.down {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.score-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 4px;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ════════════════════════════════════════════
+   Section wrapper
+   ════════════════════════════════════════════ */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-all-btn {
+  font-size: 13px;
+  color: #09a2db;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.view-all-btn:hover {
+  color: #0284c7;
+}
+
+/* ════════════════════════════════════════════
+   Quick actions
+   ════════════════════════════════════════════ */
+.qa-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.qa-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--qa-bg, #f0f9ff);
+  border: 1.5px solid transparent;
+  padding: 16px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+  text-align: left;
+}
+
+.qa-card:hover {
+  border-color: var(--qa-accent, #09a2db);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.qa-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.qa-icon {
+  font-size: 20px;
+}
+
+.qa-label {
+  flex: 1;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.qa-arrow {
+  font-size: 16px;
+  color: var(--qa-accent, #09a2db);
+  font-weight: 700;
+}
+
+/* ════════════════════════════════════════════
+   Charts row
+   ════════════════════════════════════════════ */
+.charts-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Shared chart card */
+.chart-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.chart-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-card-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.chart-card-header select {
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+  color: #374151;
+  background: #f9fafb;
+}
+
+/* ── Bar chart (User Activity) ── */
+.user-activity-card {
+  flex: 1;
+  min-width: 300px;
+}
+
+.bar-chart-wrap {
+  display: flex;
+  gap: 10px;
+  height: 200px;
+}
+
+.y-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #9ca3af;
+  text-align: right;
+  padding-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.bar-chart {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  border-left: 1px solid #f3f4f6;
+  border-bottom: 1px solid #f3f4f6;
+  padding: 0 4px 0 8px;
+}
+
+.bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  height: 100%;
+}
+
+.bar {
+  width: 100%;
+  max-width: 28px;
+  background: linear-gradient(180deg, #09a2db, #0284c7);
+  border-radius: 5px 5px 0 0;
+  transition: opacity 0.2s, height 0.4s ease;
+  cursor: pointer;
+}
+
+.bar:hover {
+  opacity: 0.75;
+}
+
+.bar-label {
+  font-size: 10px;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+/* ── Donut chart (Course Usage) ── */
+.course-usage-card {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.donut-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.donut {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #09a2db 0deg 136deg,
+    transparent 136deg 140deg,
+    #394a9e 140deg 212deg,
+    transparent 212deg 216deg,
+    #cb30e0 216deg 270deg,
+    transparent 270deg 274deg,
+    #ff8d28 274deg 356deg,
+    transparent 356deg 360deg
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.donut-center-text {
+  position: relative;
+  z-index: 1;
+  font-size: 13px;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* Course list */
+.cu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.cu-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cu-name {
+  width: 80px;
+  color: #374151;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.cu-bar-wrap {
+  flex: 1;
+  height: 6px;
+  background: #f3f4f6;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cu-bar {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.cu-pct {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111827;
+  width: 32px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════════
+   Recent Students table
+   ════════════════════════════════════════════ */
+.recent-table-wrap {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+.recent-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.recent-table thead {
+  background: #f9fafb;
+}
+
+.recent-table th {
+  padding: 11px 16px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.recent-table td {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #374151;
+  border-top: 1px solid #f3f4f6;
+}
+
+.recent-table tbody tr {
+  transition: background 0.15s;
+}
+
+.recent-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.student-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-cell img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.student-cell span {
+  font-weight: 500;
+  color: #111827;
+}
+
+.text-muted {
+  color: #9ca3af !important;
+}
+
+/* Plan badges */
+.plan-badge {
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.plan-badge.premium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.plan-badge.standard {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* Status dots */
+.status-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-dot::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-dot.active {
+  color: #065f46;
+}
+
+.status-dot.active::before {
+  background: #10b981;
+}
+
+.status-dot.inactive {
+  color: #991b1b;
+}
+
+.status-dot.inactive::before {
+  background: #ef4444;
+}
+
+/* Action button */
+.action-btn {
+  padding: 5px 14px;
+  background: #e0f2fe;
+  color: #0284c7;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-btn:hover {
+  background: #bae6fd;
+}
+
+/* ════════════════════════════════════════════
+   Responsive
+   ════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .qa-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .charts-row {
+    flex-direction: column;
+  }
+
+  .course-usage-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-page {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .score-strip {
+    flex-direction: column;
+  }
+
+  .qa-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recent-table th:nth-child(2),
+  .recent-table td:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .qa-grid {
+    grid-template-columns: 1fr;
+  }
+}

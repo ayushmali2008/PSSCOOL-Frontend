@@ -1,0 +1,212 @@
+/* ─── Notification page ─── */
+.notification-container {
+  background-color: #f5f6f8;
+  padding: 20px;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.notification-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notification-container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* Clear All button */
+.clear-all-btn {
+  background-color: #09a2db;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.clear-all-btn:hover {
+  background-color: #0284c7;
+}
+
+/* Group */
+.notifications {
+  margin-bottom: 24px;
+}
+
+.notifications h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+/* Item */
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.2s;
+}
+
+.notification-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0f2fe;
+  color: #0284c7;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content p {
+  margin: 0 0 6px;
+  font-size: 13.5px;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.notification-content .more {
+  color: #09a2db;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* Footer */
+.notification-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.notification-footer .source {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.notification-footer .timestamp {
+  color: #9ca3af;
+}
+
+/* ─── Profile card (reused in Profile.jsx) ─── */
+.profile-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  background-color: #e0f2fe;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+}
+
+.profile-name {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.profile-name h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.profile-name p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.profile-row {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+  font-size: 14px;
+}
+
+.profile-row:last-of-type {
+  border-bottom: none;
+}
+
+.profile-row label {
+  min-width: 110px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.profile-row span {
+  color: #6b7280;
+}
+
+.profile-row span.active-status {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.profile-actions button {
+  flex: 1;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.profile-actions button:hover {
+  opacity: 0.85;
+}
+
+.btn-edit-profile {
+  background-color: #09a2db;
+  color: #ffffff;
+}
+
+.btn-change-password {
+  background-color: #6b7280;
+  color: #ffffff;
+}

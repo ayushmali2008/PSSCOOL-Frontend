@@ -1,0 +1,162 @@
+.cm-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: #f5f7fb;
+}
+
+.cm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e9ecef;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.cm-title {
+  margin: 0;
+}
+
+.cm-breadcrumb {
+  color: #666;
+}
+
+.cm-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cm-subtitle {
+  margin: 0;
+}
+
+.cm-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cm-search {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+.cm-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.cm-filter-btn {
+  background: #e0e0e0;
+}
+
+.cm-add-btn {
+  background: #cfe8f5;
+  color: #0077b6;
+}
+
+.cm-note {
+  margin: 10px 0 20px;
+  color: #666;
+}
+
+.cm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.cm-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  border: 1px solid #e3e3e3;
+  height: 271px ;
+  width:  540px;
+}
+
+.cm-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cm-icon-box {
+  font-size: 22px;
+  background: #eef6fb;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cm-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cm-toggle {
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  background: #ccc;
+  position: relative;
+}
+
+.cm-toggle::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+}
+
+.cm-toggle.active {
+  background: #0ea5e9;
+}
+
+.cm-toggle.active::after {
+  left: 22px;
+}
+
+.cm-card-title {
+  margin: 15px 0;
+}
+
+.cm-stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cm-stats p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.cm-stats h5 {
+  margin: 5px 0 0;
+}
+
+.cm-card-footer {
+  margin-top: 15px;
+  background: linear-gradient( to top, #cfe8f5, #09a3db87);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: right;
+}
+
+.cm-view-btn {
+  background: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}

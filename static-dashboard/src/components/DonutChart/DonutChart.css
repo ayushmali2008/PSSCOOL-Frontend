@@ -1,0 +1,108 @@
+/* ═══════════════════════════════════════════
+   DonutChart card
+═══════════════════════════════════════════ */
+.donut-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  box-shadow: var(--shadow-sm);
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.donut-card__header {
+  margin-bottom: 20px;
+}
+
+.donut-card__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 3px;
+}
+
+.donut-card__sub {
+  font-size: 12px;
+  color: var(--gray-400);
+}
+
+/* SVG donut */
+.donut-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.donut-svg {
+  width: 140px;
+  height: 140px;
+}
+
+.donut-center-val {
+  font-size: 6px;
+  font-weight: 800;
+  fill: #111827;
+  font-family: 'Inter', sans-serif;
+}
+
+.donut-center-lbl {
+  font-size: 3.5px;
+  fill: #9ca3af;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Legend */
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.donut-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+}
+
+.donut-legend__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.donut-legend__label {
+  width: 76px;
+  color: #374151;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.donut-legend__bar-wrap {
+  flex: 1;
+  height: 5px;
+  background: var(--gray-100);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.donut-legend__bar {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.donut-legend__pct {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gray-800);
+  width: 30px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .donut-card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,320 @@
+/* ===== Wrapper ===== */
+.cnc-wrapper {
+  background-color: #f5f6fa;
+  min-height: 100vh;
+  padding: 24px 28px;
+  font-family: "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+/* ===== Header ===== */
+.cnc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.cnc-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cnc-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cnc-back-arrow {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.cnc-header-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.cnc-header-right {
+  font-size: 13px;
+  color: #888;
+}
+
+/* ===== Body Layout ===== */
+.cnc-body {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* ===== Stepper Sidebar ===== */
+.cnc-stepper {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px 20px;
+  min-width: 200px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+/* vertical line connecting steps */
+.cnc-stepper::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 48px;
+  bottom: 48px;
+  width: 2px;
+  background-color: #e0e0e0;
+  z-index: 0;
+}
+
+.cnc-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.cnc-step-indicator {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cnc-step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d0d0d0;
+  display: block;
+}
+
+.cnc-step-dot-active {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #1e90ff;
+  display: block;
+  box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.2);
+}
+
+.cnc-step-label {
+  font-size: 14px;
+  color: #555;
+  font-weight: 400;
+}
+
+.cnc-step-active .cnc-step-label {
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+/* Active step left border highlight */
+.cnc-stepper {
+  border-left: 3px solid transparent;
+}
+
+/* ===== Form Panel ===== */
+.cnc-form-panel {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px 32px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ===== Section ===== */
+.cnc-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cnc-section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 4px 0;
+}
+
+/* ===== Field ===== */
+.cnc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cnc-label {
+  font-size: 12px;
+  color: #888;
+  font-weight: 400;
+}
+
+/* ===== Input ===== */
+.cnc-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #1e90ff;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.cnc-input::placeholder {
+  color: #aaa;
+}
+
+.cnc-input:focus {
+  border-color: #1e90ff;
+}
+
+/* ===== Textarea ===== */
+.cnc-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background: #f9f9f9;
+  outline: none;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.cnc-textarea::placeholder {
+  color: #aaa;
+}
+
+.cnc-textarea:focus {
+  border-color: #1e90ff;
+  background: #fff;
+}
+
+/* ===== Select ===== */
+.cnc-select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.cnc-select {
+  width: 100%;
+  padding: 12px 40px 12px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  background: #f9f9f9;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.cnc-select:focus {
+  border-color: #1e90ff;
+  background: #fff;
+}
+
+.cnc-select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #555;
+  pointer-events: none;
+}
+
+/* ===== Footer Buttons ===== */
+.cnc-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.cnc-btn-back {
+  padding: 10px 28px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.cnc-btn-back:hover {
+  background: #f0f0f0;
+  border-color: #aaa;
+}
+
+.cnc-btn-next {
+  padding: 10px 32px;
+  border: none;
+  border-radius: 8px;
+  background: #1e90ff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cnc-btn-next:hover {
+  background: #1278d8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .cnc-body {
+    flex-direction: column;
+  }
+
+  .cnc-stepper {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .cnc-stepper::before {
+    display: none;
+  }
+
+  .cnc-form-panel {
+    padding: 20px 16px;
+  }
+}

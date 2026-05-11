@@ -1,0 +1,21 @@
+/* Students page — uses shared table patterns from shared.css */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.stat-mini {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.07);
+}
+.stat-mini__icon { font-size: 22px; }
+.stat-mini__val  { font-size: 20px; font-weight: 800; color: #111827; margin: 0 0 2px; }
+.stat-mini__lbl  { font-size: 11px; color: #6b7280; margin: 0; }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .stats-grid { grid-template-columns: 1fr 1fr; } }

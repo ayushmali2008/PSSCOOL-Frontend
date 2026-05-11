@@ -1,0 +1,482 @@
+/* ═══════════════════════════════════════════════════════
+   AddForms.css  —  shared styles for
+   AddStudent / AddInstructor / AddInstitution
+═══════════════════════════════════════════════════════ */
+
+/* ── Page wrapper ── */
+.af-page {
+  min-height: 100vh;
+  background: #f5f6f8;
+  padding: 32px 40px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Toast notification
+═══════════════════════════════════════════════════════ */
+.af-toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+  animation: af-slide-in 0.3s ease, af-fade-out 0.4s ease 1.8s forwards;
+  pointer-events: none;
+}
+
+.af-toast--success {
+  background: #ffffff;
+  color: #065f46;
+  border-left: 4px solid #10b981;
+}
+
+.af-toast__icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+@keyframes af-slide-in {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes af-fade-out {
+  to { opacity: 0; transform: translateX(20px); }
+}
+
+/* ═══════════════════════════════════════════════════════
+   Page header
+═══════════════════════════════════════════════════════ */
+.af-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  flex-wrap: wrap;
+}
+
+.af-back {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #374151;
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.af-back:hover {
+  background: #e0f2fe;
+  border-color: #09a2db;
+  color: #09a2db;
+}
+
+.af-header__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.af-header__text h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 3px;
+}
+
+.af-header__text p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Breadcrumb */
+.af-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.af-breadcrumb__sep {
+  color: #d1d5db;
+}
+
+.af-breadcrumb__current {
+  color: #09a2db;
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Form wrapper
+═══════════════════════════════════════════════════════ */
+.af-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Card
+═══════════════════════════════════════════════════════ */
+.af-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.af-card__title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #6b7280;
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Photo upload card
+═══════════════════════════════════════════════════════ */
+.af-photo-card {
+  padding: 20px 24px;
+}
+
+.af-photo-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Circle photo button */
+.af-photo-btn {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px dashed #7dd3fc;
+  background: #e0f2fe;
+  cursor: pointer;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 0;
+  transition: border-color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.af-photo-btn:hover {
+  border-color: #09a2db;
+  background: #bae6fd;
+}
+
+/* Square logo button */
+.af-photo-btn--square {
+  border-radius: 12px;
+  width: 100px;
+  height: 80px;
+}
+
+.af-photo-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: #09a2db;
+}
+
+.af-photo-empty span {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.af-photo-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.af-photo-preview--square {
+  border-radius: 10px;
+}
+
+.af-photo-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.af-photo-info__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.af-photo-info__sub {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.af-photo-change {
+  margin-top: 6px;
+  padding: 6px 14px;
+  background: #e0f2fe;
+  color: #0284c7;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s;
+  width: fit-content;
+}
+
+.af-photo-change:hover {
+  background: #bae6fd;
+}
+
+.af-hidden {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Form grid
+═══════════════════════════════════════════════════════ */
+.af-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.af-field--full {
+  grid-column: 1 / -1;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Individual field
+═══════════════════════════════════════════════════════ */
+.af-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.af-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.af-req {
+  color: #ef4444;
+  margin-left: 2px;
+}
+
+.af-optional {
+  font-size: 11px;
+  font-weight: 400;
+  color: #9ca3af;
+  margin-left: 4px;
+}
+
+/* Inputs */
+.af-field input,
+.af-field select,
+.af-field textarea {
+  padding: 10px 13px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: #111827;
+  background: #f9fafb;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.af-field input::placeholder,
+.af-field textarea::placeholder {
+  color: #9ca3af;
+}
+
+.af-field input:focus,
+.af-field select:focus,
+.af-field textarea:focus {
+  border-color: #09a2db;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(9, 162, 219, 0.12);
+}
+
+/* Error state */
+.af-field--error input,
+.af-field--error select,
+.af-field--error textarea {
+  border-color: #ef4444;
+  background: #fff5f5;
+}
+
+.af-field--error input:focus,
+.af-field--error select:focus,
+.af-field--error textarea:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.af-error-msg {
+  font-size: 11.5px;
+  color: #ef4444;
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Action buttons row
+═══════════════════════════════════════════════════════ */
+.af-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.af-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+  border: 1.5px solid transparent;
+  white-space: nowrap;
+}
+
+.af-btn:active {
+  transform: scale(0.98);
+}
+
+/* Ghost — subtle */
+.af-btn--ghost {
+  background: transparent;
+  color: #6b7280;
+  border-color: transparent;
+}
+
+.af-btn--ghost:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+/* Outline */
+.af-btn--outline {
+  background: #ffffff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.af-btn--outline:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+/* Primary — solid blue */
+.af-btn--primary {
+  background: #09a2db;
+  color: #ffffff;
+  border-color: #09a2db;
+}
+
+.af-btn--primary:hover {
+  background: #0284c7;
+  border-color: #0284c7;
+}
+
+/* ═══════════════════════════════════════════════════════
+   Responsive
+═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .af-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .af-card {
+    padding: 18px 16px;
+  }
+
+  .af-actions {
+    flex-wrap: wrap;
+    justify-content: stretch;
+    padding: 14px 16px;
+  }
+
+  .af-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .af-header {
+    flex-wrap: wrap;
+  }
+
+  .af-breadcrumb {
+    width: 100%;
+    margin-left: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .af-page {
+    padding: 12px;
+  }
+
+  .af-photo-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

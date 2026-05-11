@@ -1,0 +1,357 @@
+/* ════════════════════════════════════════════
+   Student Details  —  sd-* namespace
+   ════════════════════════════════════════════ */
+
+/* ── Full-page overlay ── */
+.sd-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  backdrop-filter: blur(2px);
+}
+
+/* ── Modal card ── */
+.sd-modal {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  animation: sd-slide-in 0.22s ease;
+}
+
+@keyframes sd-slide-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);    }
+}
+
+/* ── Top section: profile + close ── */
+.sd-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 28px 28px 20px;
+  gap: 16px;
+}
+
+.sd-profile {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.sd-profile__img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e0f2fe;
+  flex-shrink: 0;
+}
+
+.sd-profile__name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.sd-profile__institution {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Close button */
+.sd-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #374151;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+.sd-close-btn:hover {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* ── Divider ── */
+.sd-divider {
+  height: 1px;
+  background: #f3f4f6;
+  margin: 0 28px;
+}
+
+/* ── Badges + Enrollment row ── */
+.sd-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sd-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Role badge — purple outline pill */
+.sd-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.sd-badge--role {
+  border: 1.5px solid #a855f7;
+  color: #7c3aed;
+  background: #faf5ff;
+}
+
+.sd-badge--premium {
+  border: 1.5px solid #fbbf24;
+  color: #92400e;
+  background: #fffbeb;
+}
+
+.sd-badge--standard {
+  border: 1.5px solid #d1d5db;
+  color: #374151;
+  background: #f9fafb;
+}
+
+/* Enrollment date */
+.sd-enrollment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.sd-enrollment__label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.sd-enrollment__value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ── Info cards: Age Group / Institution / Role Type ── */
+.sd-info-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 0 28px 20px;
+}
+
+.sd-info-card {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 14px 18px;
+  border: 1px solid #f3f4f6;
+}
+
+.sd-info-card__label {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0 0 6px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.sd-info-card__value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ── Contact row ── */
+.sd-contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 4px 28px 20px;
+}
+
+.sd-contact-row--parent {
+  grid-template-columns: 1fr 1fr;
+  padding-top: 12px;
+}
+
+.sd-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sd-contact-item__label {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.sd-contact-item__value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ── Status toggle ── */
+.sd-toggle {
+  position: relative;
+  width: 46px;
+  height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.sd-toggle input { display: none; }
+
+.sd-toggle__track {
+  position: absolute;
+  inset: 0;
+  background: #d1d5db;
+  border-radius: 24px;
+  transition: background 0.25s;
+}
+
+.sd-toggle__track::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: transform 0.25s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sd-toggle input:checked + .sd-toggle__track { background: #09a2db; }
+.sd-toggle input:checked + .sd-toggle__track::before { transform: translateX(22px); }
+
+/* ── Parent section ── */
+.sd-parent-section {
+  padding: 20px 28px 4px;
+}
+
+.sd-parent-section__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ── Footer buttons ── */
+.sd-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 28px 24px;
+}
+
+.sd-btn-cancel {
+  padding: 10px 28px;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  transition: background 0.2s, border-color 0.2s;
+}
+.sd-btn-cancel:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.sd-btn-suspend {
+  padding: 10px 28px;
+  background: #ef4444;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  transition: background 0.2s;
+}
+.sd-btn-suspend:hover { background: #dc2626; }
+
+/* ── Not found state ── */
+.sd-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 60px 24px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .sd-modal { border-radius: 12px; }
+  .sd-top { padding: 20px 20px 16px; }
+  .sd-divider { margin: 0 20px; }
+  .sd-badges-row { padding: 14px 20px; }
+  .sd-info-cards {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px 16px;
+  }
+  .sd-contact-row {
+    grid-template-columns: 1fr 1fr;
+    padding: 4px 20px 16px;
+  }
+  .sd-contact-row--parent { grid-template-columns: 1fr 1fr; }
+  .sd-parent-section { padding: 16px 20px 4px; }
+  .sd-footer { padding: 16px 20px 20px; }
+}
+
+@media (max-width: 400px) {
+  .sd-info-cards { grid-template-columns: 1fr; }
+  .sd-contact-row { grid-template-columns: 1fr; }
+  .sd-footer { flex-direction: column-reverse; }
+  .sd-btn-cancel, .sd-btn-suspend { width: 100%; text-align: center; }
+}

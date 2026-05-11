@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.course-container {
+  background: #f4f6f9;
+  padding: 20px;
+  margin-left: 300px;
+}
+
+/* Header */
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  
+}
+
+/* Top Tabs */
+.top-tabs {
+  display: flex;
+  gap: 25px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.top-tabs span {
+  cursor: pointer;
+  color: gray;
+}
+
+.top-tabs .active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
+/* Top Section */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.filter-btn {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+}
+
+.add-btn {
+  padding: 8px 12px;
+  background: #4da3ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Sub Tabs */
+.sub-tabs {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.sub-tabs button {
+  padding: 6px 12px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+}
+
+.sub-tabs .active {
+  background: #4da3ff;
+  color: white;
+}
+
+/* Cards */
+.card-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h4 {
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 13px;
+  color: gray;
+  margin: 5px 0;
+}
+
+/* Info */
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.level {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.beginner {
+  background: #e6f7ec;
+  color: green;
+}
+
+.intermediate {
+  background: #eee6ff;
+  color: purple;
+}
+
+.advanced {
+  background: #fff0e6;
+  color: orange;
+}
+
+/* Button */
+.view-btn {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #f1f1f1;
+  cursor: pointer;
+}

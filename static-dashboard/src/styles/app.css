@@ -1,0 +1,31 @@
+/* ═══════════════════════════════════════════
+   App shell layout
+═══════════════════════════════════════════ */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Everything to the right of the sidebar */
+.app-right {
+  flex: 1;
+  margin-left: var(--sidebar-w);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Scrollable content area below topbar */
+.app-main {
+  margin-top: var(--topbar-h);
+  padding: 28px 28px 40px;
+  flex: 1;
+  background: #f0f2f5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .app-right {
+    margin-left: 0;
+  }
+}

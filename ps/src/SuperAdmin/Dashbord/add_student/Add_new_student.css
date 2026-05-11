@@ -1,0 +1,300 @@
+/* ════════════════════════════════════════════
+   Add New Student Page  —  ans-* namespace
+   ════════════════════════════════════════════ */
+
+.ans-page {
+  background: #f5f6f8;
+  padding: 24px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* ── Header ── */
+.ans-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 16px 22px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.ans-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.ans-breadcrumb {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* ── Tabs Bar ── */
+.ans-tabs-bar {
+  display: flex;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 0 22px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.ans-tab {
+  position: relative;
+  padding: 16px 4px;
+  margin-right: 28px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  outline: none;
+  white-space: nowrap;
+}
+
+.ans-tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  border-radius: 2px 2px 0 0;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.ans-tab--active {
+  color: #09a2db;
+  font-weight: 600;
+}
+
+.ans-tab--active::after {
+  background: #09a2db;
+}
+
+.ans-tab:hover:not(.ans-tab--active) {
+  color: #374151;
+}
+
+/* ── Bulk Content ── */
+.ans-bulk-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Upload Card */
+.ans-upload-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px 28px 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.ans-upload-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.ans-upload-card-sub {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0 0 20px;
+}
+
+/* Drop Zone */
+.ans-dropzone {
+  border: 2px dashed #bfdbfe;
+  border-radius: 12px;
+  background: #f0f9ff;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+}
+
+.ans-dropzone:hover,
+.ans-dropzone:focus {
+  border-color: #09a2db;
+  background: #e0f2fe;
+}
+
+.ans-dropzone--over {
+  border-color: #09a2db;
+  background: #dbeafe;
+}
+
+.ans-dropzone--filled {
+  border-color: #6ee7b7;
+  background: #f0fdf4;
+}
+
+.ans-file-input {
+  display: none;
+}
+
+/* Empty state */
+.ans-dropzone-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 20px;
+  text-align: center;
+}
+
+.ans-upload-icon-wrap {
+  display: flex;
+}
+
+.ans-dz-primary {
+  font-size: 14px;
+  color: #374151;
+  margin: 0;
+}
+
+.ans-dz-link {
+  color: #09a2db;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ans-dz-hint {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* File selected state */
+.ans-file-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 20px;
+  text-align: center;
+}
+
+.ans-file-icon-wrap {
+  display: flex;
+}
+
+.ans-file-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+  word-break: break-all;
+}
+
+.ans-file-size {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Template hint */
+.ans-template-hint {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 14px 0 0;
+}
+
+.ans-template-link {
+  background: none;
+  border: none;
+  color: #09a2db;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ans-template-link:hover {
+  color: #0284c7;
+}
+
+/* ── Action Buttons ── */
+.ans-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.ans-btn-cancel {
+  padding: 10px 24px;
+  background: #ffffff;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.ans-btn-cancel:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.ans-btn-save {
+  padding: 10px 24px;
+  background: #09a2db;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.ans-btn-save:hover:not(:disabled) {
+  background: #0284c7;
+}
+
+.ans-btn-save:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .ans-page {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .ans-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .ans-actions {
+    flex-direction: column-reverse;
+  }
+
+  .ans-btn-cancel,
+  .ans-btn-save {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.subjects-container {
+  background: #f4f6f9;
+  padding: 20px;
+  min-height: 100vh;
+  margin-left: 300px   ;
+}
+
+/* Header */
+.subjects-header {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.subjects-header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;   
+}
+
+.back {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Top */
+.subjects-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions input {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+}
+
+.add-btn {
+  padding: 8px 12px;
+  background: #4da3ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Grid */
+.card-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Card Top */
+.card-top {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.line {
+  width: 4px;
+  height: 40px;
+  background: #00aaff;
+  border-radius: 2px;
+}
+
+.card h4 {
+  margin-bottom: 5px;
+}
+
+.card p {
+  color: gray;
+  font-size: 14px;
+}
+
+/* Button */
+.view-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 8px;
+  background: #f1f1f1;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

@@ -1,0 +1,198 @@
+/* ═══════════════════════════════════════════════════
+   shared.css — reusable table / form / badge patterns
+═══════════════════════════════════════════════════ */
+
+/* Page wrapper */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Page header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.07);
+}
+.page-header h2 { font-size: 18px; font-weight: 700; color: #111827; margin: 0 0 4px; }
+.page-header p  { font-size: 13px; color: #6b7280; margin: 0; }
+.breadcrumb     { font-size: 12px; color: #9ca3af; align-self: center; }
+
+/* Table card */
+.table-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.07);
+  overflow: hidden;
+}
+
+/* Toolbar */
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.table-toolbar h3 {
+  font-size: 15px; font-weight: 700; color: #111827;
+  margin: 0; display: flex; align-items: center; gap: 8px;
+}
+.toolbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+/* Badge */
+.badge {
+  background: #e0f2fe; color: #0284c7;
+  font-size: 11px; font-weight: 700;
+  padding: 2px 8px; border-radius: 20px;
+}
+
+/* Search */
+.search-box {
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid #e5e7eb; border-radius: 8px;
+  padding: 7px 12px; background: #f9fafb;
+}
+.search-box input {
+  border: none; outline: none; background: transparent;
+  font-size: 13px; color: #111827; width: 180px; font-family: inherit;
+}
+.search-box input::placeholder { color: #9ca3af; }
+
+/* Buttons */
+.btn-primary {
+  padding: 7px 16px; background: #4f46e5; color: #fff;
+  border: none; border-radius: 8px; font-size: 13px;
+  font-weight: 600; cursor: pointer; font-family: inherit;
+  transition: background .2s;
+}
+.btn-primary:hover { background: #4338ca; }
+
+.btn-outline {
+  padding: 7px 14px; border: 1px solid #e5e7eb;
+  background: #fff; border-radius: 8px; font-size: 13px;
+  color: #374151; cursor: pointer; font-family: inherit;
+  transition: background .2s;
+}
+.btn-outline:hover { background: #f3f4f6; }
+
+/* Table */
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+thead { background: #f9fafb; }
+th {
+  padding: 10px 14px; text-align: left;
+  font-size: 11px; font-weight: 700; color: #6b7280;
+  text-transform: uppercase; letter-spacing: .05em; white-space: nowrap;
+}
+td {
+  padding: 12px 14px; font-size: 13px;
+  color: #374151; border-top: 1px solid #f3f4f6;
+}
+tbody tr { transition: background .15s; }
+tbody tr:hover { background: #f9fafb; }
+
+.mono  { font-family: monospace; font-size: 12px; color: #9ca3af; }
+.muted { color: #9ca3af; }
+.empty { text-align: center; padding: 40px !important; color: #9ca3af; font-size: 14px; }
+
+/* Name cell */
+.name-cell { display: flex; align-items: center; gap: 10px; }
+.name-cell img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
+.name-cell span { font-weight: 500; color: #111827; }
+
+/* Status dot */
+.dot-status {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 12px; font-weight: 600;
+}
+.dot-status::before {
+  content: ''; width: 7px; height: 7px;
+  border-radius: 50%; flex-shrink: 0;
+}
+.dot-status.active   { color: #065f46; }
+.dot-status.active::before   { background: #10b981; }
+.dot-status.inactive { color: #991b1b; }
+.dot-status.inactive::before { background: #ef4444; }
+
+/* Plan badge */
+.plan-badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+.plan-badge.premium  { background: #fef3c7; color: #92400e; }
+.plan-badge.standard { background: #e5e7eb; color: #374151; }
+
+/* State badge */
+.state-badge { padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+.state-badge.verified  { background: #d1fae5; color: #065f46; }
+.state-badge.suspended { background: #fee2e2; color: #991b1b; }
+
+/* Toggle */
+.toggle { position: relative; width: 38px; height: 20px; display: inline-block; cursor: pointer; }
+.toggle input { display: none; }
+.toggle-track {
+  position: absolute; inset: 0; background: #d1d5db;
+  border-radius: 20px; transition: background .3s;
+}
+.toggle-track::before {
+  content: ''; position: absolute; width: 14px; height: 14px;
+  background: #fff; border-radius: 50%; top: 3px; left: 3px;
+  transition: transform .3s; box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+.toggle input:checked + .toggle-track { background: #4f46e5; }
+.toggle input:checked + .toggle-track::before { transform: translateX(18px); }
+
+/* View button */
+.view-btn {
+  padding: 5px 12px; background: #eef2ff; color: #4f46e5;
+  border: none; border-radius: 6px; font-size: 12px;
+  font-weight: 600; cursor: pointer; font-family: inherit;
+  transition: background .2s;
+}
+.view-btn:hover { background: #c7d2fe; }
+
+/* Pagination */
+.pagination {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 20px; border-top: 1px solid #f3f4f6;
+  flex-wrap: wrap; gap: 10px;
+}
+.pages { display: flex; align-items: center; gap: 4px; }
+.pg-btn {
+  padding: 5px 10px; border: 1px solid #e5e7eb; background: #fff;
+  border-radius: 6px; font-size: 12px; color: #374151;
+  cursor: pointer; font-family: inherit; transition: background .15s;
+}
+.pg-btn:hover  { background: #f3f4f6; }
+.pg-btn.active { background: #4f46e5; color: #fff; border-color: #4f46e5; font-weight: 700; }
+
+/* Coming-soon card */
+.coming-soon {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 60vh;
+}
+.coming-soon__card {
+  background: #fff; border-radius: 16px; padding: 48px 40px;
+  text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,.08);
+  max-width: 420px; width: 100%;
+}
+.coming-soon__icon  { font-size: 52px; margin-bottom: 16px; }
+.coming-soon__title { font-size: 22px; font-weight: 800; color: #111827; margin: 0 0 10px; }
+.coming-soon__desc  { font-size: 14px; color: #6b7280; margin: 0 0 20px; line-height: 1.6; }
+.coming-soon__badge {
+  display: inline-block; background: #fef3c7; color: #92400e;
+  font-size: 12px; font-weight: 700; padding: 4px 14px;
+  border-radius: 20px; text-transform: uppercase; letter-spacing: .04em;
+}
+
+@media (max-width: 768px) {
+  .search-box input { width: 120px; }
+  .table-toolbar { flex-direction: column; align-items: flex-start; }
+}

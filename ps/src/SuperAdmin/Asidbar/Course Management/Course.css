@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.Coding{
+      background: #f7f8fa;
+  min-height: 100vh;
+  padding: 20px;
+    width: 80%;
+    margin-left: 300px;
+}
+/* .container {
+
+} */
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.header .left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .back {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header .right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: gray;
+}
+
+.header .view {
+  color: #007bff;
+  cursor: pointer;
+}
+
+/* Top Section */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.filter-btn {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn {
+  padding: 8px 12px;
+  border: none;
+  background: #4da3ff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Tabs */
+.tabs {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.tab {
+  padding: 8px 15px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: #4da3ff;
+  color: white;
+}
+
+/* Empty Section */
+.empty {
+  text-align: center;
+  margin-top: 80px;
+   
+}
+
+.empty img {
+  width: 150px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+   display: block;
+  margin: 0 auto;
+}
+
+.empty h2 {
+  margin-bottom: 10px;
+}
+
+.empty p {
+  color: gray;
+}
